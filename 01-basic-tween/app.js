@@ -23,13 +23,13 @@
 gsap.defaults({ duration: 1 })
 
 // Inline style of DOM elements are updated!
-gsap.to('.smiley', {
-  x: 400,
-  y: 200,
-  scale: 3,
-  rotation: 360,
-  duration: 3, // default 0.5
-})
+// gsap.to('.smiley', {
+//   x: 400,
+//   y: 200,
+//   scale: 3,
+//   rotation: 360,
+//   duration: 3, // default 0.5
+// })
 
 /*
  * target: CSS string selector, DOM element, (maybe) React Component?
@@ -48,3 +48,26 @@ gsap.to('.smiley', {
  * - color, backgroundColor
  * + it supports vm, vh +
  */
+
+// gsap.from(target, varsObject)
+gsap.from('.smiley', {
+  x: 400,
+  y: 200,
+  scale: 3,
+  rotation: 360,
+  duration: 3, // default 0.5
+})
+
+// gsap.fromTo(target, fromVarsObject, toVarsObject)
+gsap.fromTo(
+  '.smiley',
+  { x: 700, y: 400, rotation: 0, opacity: 0 },
+  {
+    x: 400,
+    y: 200,
+    scale: 2,
+    rotation: 360,
+    opacity: 1,
+    duration: 3, // default 0.5
+  }
+)
